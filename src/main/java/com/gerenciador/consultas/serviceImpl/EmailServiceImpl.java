@@ -10,7 +10,7 @@ import com.gerenciador.consultas.services.EmailService;
 @Service
 public class EmailServiceImpl implements EmailService {
 
-    @Value("${email.api-key}")
+    @Value("${security.api-key.secret-key}")
     private String apiKey;
 
     private final EmailFeignClient emailClient;
@@ -21,6 +21,6 @@ public class EmailServiceImpl implements EmailService {
 
     @Override
     public void enviarEmail(EmailRequestDTO dto) {
-        emailClient.enviarEmail(apiKey, dto);
+        emailClient.enviarEmail(dto);
     }
 }

@@ -1,16 +1,25 @@
 package com.gerenciador.consultas.dto;
 
+import java.util.List;
 
 public class EmailRequestDTO {
-    private String smtpHost;
+	
+	private String smtpHost;
     private int smtpPort;
+    
+    
     private String smtpUsername;
     private String smtpPassword;
+
+    // Dados do e-mail
     private String from;
     private String to;
     private String subject;
     private String bodyHtml;
     
+   
+    
+  
 	public String getSmtpHost() {
 		return smtpHost;
 	}
@@ -59,6 +68,7 @@ public class EmailRequestDTO {
 	public void setBodyHtml(String bodyHtml) {
 		this.bodyHtml = bodyHtml;
 	}
+
 
     
 }
